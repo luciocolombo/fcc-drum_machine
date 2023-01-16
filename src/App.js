@@ -8,15 +8,17 @@ function App() {
       window.addEventListener("keydown", (event) => handleKeydown(event, lettersArray));
    });
    return (
-      <div className="App container h-100" id="drum-machine">
-         <div className="container row w-50" id="mainDiv">
-            <div className="col-5">
+      <div className="App container w-50 align-items-center d-flex" id="drum-machine">
+         <div className="row" id="mainDiv">
+            <div className="col">
                {lettersArray.map((letter, i) => (
                   <Drum letter={letter} sound={sounds[i]} key={i} />
                ))}
             </div>
 
-            <div className="col-1" id="display"></div>
+            <div className="col text-center align-self-center bg-light" id="display">
+               Press a drum!
+            </div>
          </div>
       </div>
    );

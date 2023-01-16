@@ -3,7 +3,7 @@ import React from "react";
 function Drum(props) {
    const { letter, sound } = props;
    return (
-      <button id={letter + "button"} className="drum-pad btn btn-secondary m-1 col-1" onClick={() => playSound(letter)}>
+      <button id={letter + "button"} className="drum-pad btn btn-secondary m-1 col-3" onClick={() => playSound(letter)}>
          <audio id={letter.toUpperCase()} className="clip" src={sound}></audio>
          {letter.toUpperCase()}
       </button>
